@@ -31,7 +31,7 @@ export default function AddSubcategory() {
     ])
 
     const getCatArray = async () => {
-        const response = await fetch(`https://adminlm.onrender.com/api/category/`, {
+        const response = await fetch(`http://127.0.0.1:8000/api/category/`, {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
@@ -74,7 +74,7 @@ export default function AddSubcategory() {
             formData.append('color', obj.color);
             formData.append('allowed', isToggled);
             console.log(formData);
-            axios.post("https://adminlm.onrender.com/api/subcategory/",formData)
+            axios.post("http://127.0.0.1:8000/api/subcategory/",formData)
                 .then((response) => {
                     console.log(response);
                     showAlert("Subcategroy Added Successfully", "success")

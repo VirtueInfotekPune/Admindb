@@ -17,7 +17,7 @@ const ProductDetails = () => {
 
   // getproducts api
   const getProducts = async () => {
-    const response = await fetch(`https://adminlm.onrender.com/api/product/`, {
+    const response = await fetch(`http://127.0.0.1:8000/api/product/`, {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',
@@ -32,7 +32,7 @@ const ProductDetails = () => {
   const onDelete = (id, event) => {
     event.preventDefault();
     console.log(id);
-    axios.delete(`https://adminlm.onrender.com/api/product/${id}`)
+    axios.delete(`http://127.0.0.1:8000/api/product/${id}`)
       .then((response) => {
         console.log(response);
         console.log('\ndeleted');
@@ -43,7 +43,7 @@ const ProductDetails = () => {
 
   const [catarray, setcatarray] = React.useState([]);
   const getCatArray = async () => {
-    const response = await fetch(`https://adminlm.onrender.com/api/category/`, {
+    const response = await fetch(`http://127.0.0.1:8000/api/category/`, {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',

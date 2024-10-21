@@ -72,7 +72,7 @@ export default function EditFinanceanager() {
         formData.append('agentimage', agentimage);
 
 
-        axios.put(`https://adminlm.onrender.com/api/finman/${oldobj.id}`, formData)
+        axios.put(`http://127.0.0.1:8000/api/finman/${oldobj.id}`, formData)
             .then((response) => {
                 console.log(response);
                 navigate('/dashboard/viewfinancemanagers');

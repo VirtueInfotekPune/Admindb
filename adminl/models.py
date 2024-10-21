@@ -4,13 +4,13 @@ from django.db.models import Model
 
 
 
-# class adminl(models.Model):
-#     email = models.CharField(max_length=50,default='kartik@gmail.com')
-#     password= models.CharField(max_length=50, default="fruits")
+class adminl(models.Model):
+    email = models.CharField(max_length=50,default='kartik@gmail.com')
+    password= models.CharField(max_length=50, default="fruits")
 
-#     #to save the data
-#     def register(self):
-#         self.save()
+    #to save the data
+    def register(self):
+        self.save()
 
 class Category(models.Model):
     allowed= models.BooleanField(default=False)

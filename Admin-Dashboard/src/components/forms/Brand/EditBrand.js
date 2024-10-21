@@ -24,7 +24,7 @@ export default function EditBrand() {
     const [vendorarray, setvendorarray] = useState([])
 
     const getVendors = async () => {
-        const response = await fetch(`https://adminlm.onrender.com/api/vendor/`, {
+        const response = await fetch(`http://127.0.0.1:8000/api/vendor/`, {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
@@ -38,7 +38,7 @@ export default function EditBrand() {
     const [brandarray, setbrandarray] = useState([])
 
     const getBrandArray = async () => {
-        const response = await fetch(`https://adminlm.onrender.com/api/brand/`, {
+        const response = await fetch(`http://127.0.0.1:8000/api/brand/`, {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
@@ -65,7 +65,7 @@ export default function EditBrand() {
         else {
             console.log(obj.oldbrand)
             
-            axios.put(`https://adminlm.onrender.com/api/brand/${obj.oldbrand}`, {
+            axios.put(`http://127.0.0.1:8000/api/brand/${obj.oldbrand}`, {
                 bname: obj.newbrand,
                 vendors: obj.vendorname
             })

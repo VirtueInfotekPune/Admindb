@@ -33,7 +33,7 @@ export default function AddUom() {
         }
         else {
 
-            axios.post("https://adminlm.onrender.com/api/uom/", { name: obj.uom })
+            axios.post("http://127.0.0.1:8000/api/uom/", { name: obj.uom })
                 .then((response) => {
                     console.log(response);
                     showAlert("Unit of Measurement Added Successfully", "success")

@@ -79,7 +79,7 @@ export default function AddFinanceanager() {
         formData.append('agentimage', agentimage);
         console.log("formdata : \n" + formData);
 
-        axios.post("https://adminlm.onrender.com/api/finman/", formData)
+        axios.post("http://127.0.0.1:8000/api/finman/", formData)
             .then((response) => {
                 console.log(response);
                 showAlert("Finance Manager Added Successfully", "success")

@@ -20,7 +20,7 @@ const DeliveryDetails = () => {
 
   // getdeliveryagents api
   const getDeliveryAgents = async () => {
-    const response = await fetch(`https://adminlm.onrender.com/api/delivpar/`, {
+    const response = await fetch(`http://127.0.0.1:8000/api/delivpar/`, {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',
@@ -34,7 +34,7 @@ const DeliveryDetails = () => {
 
   const onDelete = (id, event) => {
     event.preventDefault();
-    axios.delete(`https://adminlm.onrender.com/api/delivpar/${id}`)
+    axios.delete(`http://127.0.0.1:8000/api/delivpar/${id}`)
       .then((response) => {
         console.log(response);
         console.log('\ndeleted');

@@ -33,7 +33,7 @@ export default function EditSubCategory() {
     const [catarray, setcatarray] = useState([])
 
     const getCatArray = async () => {
-        const response = await fetch(`https://adminlm.onrender.com/api/category/`, {
+        const response = await fetch(`http://127.0.0.1:8000/api/category/`, {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
@@ -46,7 +46,7 @@ export default function EditSubCategory() {
     const [subcatarray, setsubcatarray] = useState([])
 
     const getSubcatArray = async () => {
-        const response = await fetch(`https://adminlm.onrender.com/api/subcategory/`, {
+        const response = await fetch(`http://127.0.0.1:8000/api/subcategory/`, {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
@@ -83,7 +83,7 @@ export default function EditSubCategory() {
             formData.append('color', obj.color);
             formData.append('allowed', isToggled);
 
-            axios.put(`https://adminlm.onrender.com/api/subcategory/${m.id}`, formData)
+            axios.put(`http://127.0.0.1:8000/api/subcategory/${m.id}`, formData)
                 .then(res => {
                     console.log(res.data);
                     setobj({ category: '', updatedsubcategory: '', subcategory: '', color: '' });

@@ -12,7 +12,7 @@ export default function AdminLogin({ update, login }) {
     const [cred, setcred] = useState(null)
 
     const getCred=async()=>{
-        const response = await fetch(`https://adminlm.onrender.com/api/adminlog/`, {
+        const response = await fetch(`http://127.0.0.1:8000/api/adminlog/`, {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',

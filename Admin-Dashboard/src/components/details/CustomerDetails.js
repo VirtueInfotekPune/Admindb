@@ -17,7 +17,7 @@ const CustomerDetails = () => {
 
   // getcustomer api
   const getCustomers = async () => {
-    const response = await fetch(`https://adminlm.onrender.com/api/customer/`, {
+    const response = await fetch(`http://127.0.0.1:8000/api/customer/`, {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',
@@ -31,7 +31,7 @@ const CustomerDetails = () => {
 
   const onDelete = (id, event) => {
     event.preventDefault();
-    axios.delete(`https://adminlm.onrender.com/api/customer/${id}`)
+    axios.delete(`http://127.0.0.1:8000/api/customer/${id}`)
       .then((response) => {
         console.log(response);
         console.log('\ndeleted');

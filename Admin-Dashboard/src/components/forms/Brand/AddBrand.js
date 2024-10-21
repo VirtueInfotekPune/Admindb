@@ -23,7 +23,7 @@ export default function AddBrand() {
     const [vendorarray, setvendorarray] = useState([])
 
     const getVendors = async () => {
-        const response = await fetch(`https://adminlm.onrender.com/api/vendor/`, {
+        const response = await fetch(`http://127.0.0.1:8000/api/vendor/`, {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
@@ -50,7 +50,7 @@ export default function AddBrand() {
         else {
 
 
-            axios.post("https://adminlm.onrender.com/api/brand/", {
+            axios.post("http://127.0.0.1:8000/api/brand/", {
                 bname: obj.productname,
                 vendors: obj.bvendors,
             })
